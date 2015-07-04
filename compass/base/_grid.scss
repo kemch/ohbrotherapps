@@ -1,0 +1,96 @@
+// Infinitely Nestable Fluid Grid
+// --------------------------------------------------
+
+// Options
+// --------------------------------------------------
+
+$grid-columns: 				24;
+$grid-gutter-width:			1em;
+$grid-column-width: 		1.5em;
+$grid-container-padding: 	1em;
+
+
+// Grid Math
+// --------------------------------------------------
+
+// The extra gutter needs to be there to calculate fluid column widths.
+$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+
+// The end result width of full row of columns.
+$row-width: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-columns - 1)); 
+
+// Mixins
+
+@mixin row-clear { &:before,
+			   &:after { display: table; content: ""; line-height: 0; }
+			   &:after { clear: both; }
+			 }
+
+@mixin container($type:fluid) {
+	@if ($type == fluid) {
+		max-width: $row-width + (2 * $grid-container-padding);
+	}
+	@else if ($type == static) {
+		width: $row-width + (2 * $grid-container-padding);
+	}
+	padding: {
+		left: $grid-container-padding;
+		right: $grid-container-padding;
+	}
+	margin: 0 auto;
+}
+
+@mixin row ($grid-columns) {
+
+	@include row-clear;
+	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+	$grid-gutter-width-percent: percentage($grid-gutter-width / $row-context);
+
+	margin-left: $grid-gutter-width-percent * -1;
+}
+
+@mixin spans($column-spans, $grid-columns) {
+
+	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+
+	$span-width-unit: ($column-spans * $grid-column-width) + (($column-spans - 1) * $grid-gutter-width);
+	$span-width-percent: percentage($span-width-unit / $row-context );
+	
+	$spangrid-gutter-width: $grid-gutter-width;
+	$span-gutter-percent: percentage( $spangrid-gutter-width / $row-context );
+
+	width: $span-width-percent;
+	margin-left: $span-gutter-percent;
+	float: left;
+}
+
+// Todo. DRY
+
+@mixin push($column-spans, $grid-columns) {
+
+	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+
+	$span-width-unit: ($column-spans * $grid-column-width) + (($column-spans - 1) * $grid-gutter-width);
+	$span-width-percent: percentage($span-width-unit / $row-context );
+	
+	$spangrid-gutter-width: $grid-gutter-width;
+	$span-gutter-percent: percentage( $spangrid-gutter-width / $row-context );
+
+	margin-left: (2*$span-gutter-percent) + $span-width-percent;
+}
+@mixin pull($column-spans, $grid-columns) {
+
+	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+
+	$span-width-unit: ($column-spans * $grid-column-width) + (($column-spans - 1) * $grid-gutter-width);
+	$span-width-percent: percentage($span-width-unit / $row-context );
+	
+	$spangrid-gutter-width: $grid-gutter-width;
+	$span-gutter-percent: percentage( $spangrid-gutter-width / $row-context );
+
+	margin-right: (2*$span-gutter-percent) + $span-width-percent;
+}
+
+
+
+
