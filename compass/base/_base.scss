@@ -54,7 +54,7 @@ $white-shadow: rgba(#ffffff, .8);
 //===========================
 // 		.. * Grid * ..
 //===========================
-@import "partials/grid";
+@import "grid";
 .container { @include container; }
 .row { @include row(24);}
 @for $i from 1 through 24 {

@@ -14,7 +14,7 @@ $grid-container-padding: 	1em;
 // --------------------------------------------------
 
 // The extra gutter needs to be there to calculate fluid column widths.
-$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns) !global;
 
 // The end result width of full row of columns.
 $row-width: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-columns - 1)); 
@@ -43,7 +43,7 @@ $row-width: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-
 @mixin row ($grid-columns) {
 
 	@include row-clear;
-	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+	$row-context: $grid-columns * $grid-column-width + $grid-gutter-width * $grid-columns !global;
 	$grid-gutter-width-percent: percentage($grid-gutter-width / $row-context);
 
 	margin-left: $grid-gutter-width-percent * -1;
@@ -51,7 +51,7 @@ $row-width: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-
 
 @mixin spans($column-spans, $grid-columns) {
 
-	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+	$row-context: $grid-columns * $grid-column-width + $grid-gutter-width * $grid-columns !global;
 
 	$span-width-unit: ($column-spans * $grid-column-width) + (($column-spans - 1) * $grid-gutter-width);
 	$span-width-percent: percentage($span-width-unit / $row-context );
@@ -68,7 +68,7 @@ $row-width: ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-
 
 @mixin push($column-spans, $grid-columns) {
 
-	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns);
+	$row-context: ($grid-columns * $grid-column-width) + ($grid-gutter-width * $grid-columns) !global;
 
 	$span-width-unit: ($column-spans * $grid-column-width) + (($column-spans - 1) * $grid-gutter-width);
 	$span-width-percent: percentage($span-width-unit / $row-context );
