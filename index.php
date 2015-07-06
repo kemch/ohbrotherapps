@@ -124,7 +124,7 @@
     </div>
     <div class="bg-blue-dark footer">
         <footer>
-            <p><em>Oh Brother! </em> by Bob Weber Jr. and Jay Stephens. App design and development by Evette Gabriel Design Group. <a href="mailto:support@ohbrotherapps.com">Contact Support</a></p>
+            <p><em>Oh Brother! </em> by Bob Weber Jr. and Jay Stephens. App design and development by <a class="footer-link" href="http://evettegabriel.com/" target="_blank">Evette Gabriel Design Group</a>. <a href="mailto:support@ohbrotherapps.com">Contact Support</a></p>
         </footer>
     </div>
 <? include('partials/footer.php'); ?>
