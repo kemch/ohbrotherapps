@@ -539,7 +539,7 @@ h1, h2, h3 {
   font-size: 5em;
   font-size: 8vw;
   z-index: 1000;
-  margin: 0.5em 0;
+  margin: 0.25em 0;
   font-family: 'Bangers', cursive;
   text-shadow: 5px 5px 0 rgba(175, 209, 212, 0.5);
   -moz-transform: skew(0, -6.7deg);
@@ -552,6 +552,11 @@ h1, h2, h3 {
     font-size: 3em;
     font-size: 10vw;
   }
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
 }
 
 h3 {
@@ -908,6 +913,8 @@ img {
   margin-left: 15px;
   position: relative;
   top: 10px;
+  max-width: 230px;
+  margin-top: -20px;
 }
 @media only screen and (max-width: 748px) {
   .cta span {
@@ -966,7 +973,7 @@ img {
   }
 }
 .section-top {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 @media only screen and (max-width: 748px) {
   .section-top {
@@ -1003,8 +1010,8 @@ img {
 
 .activities-wrap {
   position: relative;
-  padding-top: 10%;
-  padding-bottom: 5%;
+  padding-top: 50px;
+  padding-bottom: 20px;
 }
 @media only screen and (max-width: 748px) {
   .activities-wrap {

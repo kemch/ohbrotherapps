@@ -3,9 +3,11 @@
         <div class="container">
             <div class="row">
                 <div class="span24">
-                    <div class="logo">
-                        <img src="/img/ohbrother-logo.png" alt="Oh Brother!">
-                    </div>
+                    <header>
+                        <div class="logo">
+                            <h1><img src="/img/ohbrother-logo.png" alt="Oh Brother!"></h1>
+                        </div>
+                    </header>
                 </div>
             </div>
         </div>
@@ -15,8 +17,8 @@
             <div class="row">
                 <div class="span24">
                     <div class="layer-1">
-                        <div class="bang1"><div class="callout">When Siblings<br><span>Collide</span></div></div>
-                        <div class="bang2"><div class="callout">For iPad</div></div>
+                        <div class="bang1 anim-in"><div class="callout">When Siblings<br><span>Collide</span></div></div>
+                        <div class="bang2 anim-in"><div class="callout">For iPad</div></div>
                     </div>
                     <div class="ipad-container">
                         <div class="layer-2">
@@ -96,7 +98,7 @@
                 </div>
                 
                 <div class="span6 activity-text">
-                    <h3>Cut & Paste!</h3>
+                    <h3>Cut &amp; Paste!</h3>
                     <p>Assemble a finished <em>Oh Brother!</em> comic strip with a library of art and backgrounds. </p>
                 </div>
                 <div class="span6 bud-img cutpaste">
@@ -111,7 +113,6 @@
                 <div class="span6 bud-img color">
                     <img src="/img/bud-color.png" alt="Color it!">
                 </div>
-                
                 <div class="span6 activity-text">
                     <h3>Publish it!</h3>
                     <p>Send us your finished <em>Oh Brother!</em> comic strip for a chance to see it on the Daily Brother gallery wall!</p>

@@ -8,11 +8,11 @@
 // IE 10 doesn't need it
 
 $(function() {
-	causeRepaintsOn = $("h1, h2, h3, p");
+	causeRepaintsOn = $("h1, h2, h3, p")
 	$(window).resize(function() {
-		causeRepaintsOn.css("z-index", 1);
-	});
-});
+		causeRepaintsOn.css("z-index", 1)
+	})
+})
 
 // Flex Slider
 $('#slide-rotate').flexslider({
@@ -22,4 +22,8 @@ $('#slide-rotate').flexslider({
 	pauseOnHover: true,
 	controlNav: false,
 	directionNav: false
-});
+})
+
+$('.js-buy').click(function(){
+	ga('send', 'click', 'buy-button', 'buy-button-click', 'Buy Button')
+})
