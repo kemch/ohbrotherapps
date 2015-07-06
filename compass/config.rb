@@ -9,5 +9,5 @@ images_dir = "../img"
 
 sourcemap = false
 
-output_style = :expanded
+output_style = :compressed
 line_comments = false
