@@ -614,6 +614,10 @@ img {
   background-color: #19becf;
 }
 
+.bg-blue-dark {
+  background-color: #0e6a74;
+}
+
 .bg-red {
   background: #d84835 url(../img/red-bg.jpg) scroll repeat-x top center;
 }
@@ -1095,4 +1099,14 @@ img {
     width: auto;
     max-width: 60%;
   }
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: #62dfec;
+  font-size: 12px;
+}
+.footer a {
+  color: #62dfec;
 }

@@ -119,9 +119,12 @@
                 <div class="span6 bud-img publish">
                     <img src="/img/bud-publish.png" alt="Publish it!">
                 </div>
-                
-                
             </div>
         </div>
+    </div>
+    <div class="bg-blue-dark footer">
+        <footer>
+            <p><em>Oh Brother! </em> by Bob Weber Jr. and Jay Stephens. App design and development by Evette Gabriel Design Group. <a href="mailto:support@ohbrotherapps.com">Contact Support</a></p>
+        </footer>
     </div>
 <? include('partials/footer.php'); ?>
